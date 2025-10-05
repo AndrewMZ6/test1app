@@ -15,4 +15,10 @@
             Узерс
         </button>
     </RouterLink>
+
+    <RouterLink to="/concrete">
+        <button>
+            Конкретный юзер
+        </button>
+    </RouterLink>
 </template>
