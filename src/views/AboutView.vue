@@ -2,7 +2,10 @@
   <div class="about">
     <h1>This is an about page</h1>
     <h3>{{ store.count }}</h3>
-    <button @click="store.increment"> Oh yeah </button>
+    <NavButton 
+      @click="store.increment"
+      buttonText="Increment Count"
+    />
   </div>
 </template>
 
@@ -19,6 +22,7 @@
 
 <script setup>
   import { useCounterStore } from '@/stores/counter';
+  import NavButton from '@/components/NavButton.vue';
 
   const store = useCounterStore();
 </script>

@@ -1,6 +1,7 @@
 <script setup>
   import MyComponent from '@/components/MyComponent.vue'
   import { useCounterStore } from '@/stores/counter';
+  import NavButton from '@/components/NavButton.vue';
 
   const store = useCounterStore();
 
@@ -20,7 +21,10 @@
       </template>
       
       <h3>{{ store.count }}</h3>
-      <button @click="store.increment"> Home view </button>
+      <NavButton
+        @click="store.increment"
+        buttonText="Increment Count"
+      />
     </MyComponent>
   </div>
 </template>
