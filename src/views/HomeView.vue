@@ -1,5 +1,8 @@
 <script setup>
   import MyComponent from '@/components/MyComponent.vue'
+  import { useCounterStore } from '@/stores/counter';
+
+  const store = useCounterStore();
 
   const bodyText = `<h3><b> This is doggy slot </b></h3>`
 </script>
@@ -15,6 +18,9 @@
       <template #doggy>
         <div v-html="bodyText"></div>
       </template>
+      
+      <h3>{{ store.count }}</h3>
+      <button @click="store.increment"> Home view </button>
     </MyComponent>
   </div>
 </template>
