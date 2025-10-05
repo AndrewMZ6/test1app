@@ -6,7 +6,7 @@
 
 <template>
   <div class="home">
-    <MyComponent prop1="Hello from App.vue" prop2="Hello again from App.vue">
+    <MyComponent prop1="Hello from App.vue" prop2="Hello again from App.vue" prop3="<i>This is prop3</i>">
       <template #kitten>
         <h1>This is kitten slot</h1>
       </template>
