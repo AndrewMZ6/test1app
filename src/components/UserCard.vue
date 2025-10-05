@@ -1,8 +1,9 @@
 <template>
     <div class="user-card">
         <h2>User Card</h2>
-        <p>Name: {{ store.username }}</p>
-        <p>Age: {{ store.age }}</p>
+        <p>Name: {{ store.$state.username }}</p>
+        <p>Age: {{ store.$state.age }}</p>
+        <p>Full name: {{ store.fullName }}</p>
         <NavButton 
             buttonText="Change Name"
             @click="store.changeName"
@@ -16,7 +17,7 @@
 
 <script setup>
     import myStorageFunction from '@/stores/myStorage.js'
-    import NavButton from './NavButton.vue';
+    import NavButton from './NavButton.vue'
 
     const store = myStorageFunction()
 </script>
