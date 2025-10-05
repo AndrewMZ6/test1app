@@ -1,24 +1,25 @@
 <template>
-    <p>Current route is: <h3 style="display: inline;"><b>{{ $route.fullPath }}</b></h3></p>
+    <p>Current route is: </p> <h3><b>{{ $route.fullPath }}</b></h3>
     <RouterLink to="/">
-        <button> Домой </button>
+      <NavButton buttonText="Главная" />
     </RouterLink>
     
     <RouterLink to="/about">
-        <button>
-            О нас
-        </button>
+        <NavButton buttonText="О нас" />
     </RouterLink>
 
     <RouterLink to="/users">
-        <button>
-            Узерс
-        </button>
+        <NavButton buttonText="Узерс" />
     </RouterLink>
 
     <RouterLink to="/concrete">
-        <button>
-            Конкретный юзер
-        </button>
+        <NavButton buttonText="Конкретный узер" />
     </RouterLink>
 </template>
+
+
+<script setup>
+import NavButton from './NavButton.vue';
+
+
+</script>
