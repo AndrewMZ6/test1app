@@ -1,5 +1,5 @@
 export default {
     "name": "John Willson",
-    maritalStatus: "idiot",
-    kids: 1,
+    maritalStatus: "Garbage",
+    kids: 4,
 }
