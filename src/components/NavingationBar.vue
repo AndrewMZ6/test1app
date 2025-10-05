@@ -1,5 +1,12 @@
 <template>
     <p>Current route is: {{ $route.fullPath }}</p>
-    <RouterLink to="/"> Домой </RouterLink>
-    <RouterLink to="/about"> О нас</RouterLink>
+    <RouterLink to="/">
+        <button> Домой </button>
+    </RouterLink>
+    
+    <RouterLink to="/about">
+        <button>
+            О нас
+        </button>
+    </RouterLink>
 </template>
