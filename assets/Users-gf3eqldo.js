@@ -1,0 +1,1 @@
+import{c as r,a as n,t as a,d as s,o as l}from"./index-C8m7_1kS.js";const e={name:"John Willson",maritalStatus:"Garbage",kids:4},u={__name:"Users",setup(o){return(i,t)=>(l(),r("div",null,[t[0]||(t[0]=n("h1",null,"Users Page",-1)),n("p",null,"User "+a(s(e).name)+", is "+a(s(e).maritalStatus)+" and has "+a(s(e).kids)+" children",1)]))}};export{u as default};
