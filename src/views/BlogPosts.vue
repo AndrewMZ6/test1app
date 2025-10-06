@@ -11,16 +11,18 @@
 
 <script setup>
     import BlogPost from '@/components/BlogPost.vue';
+    import { ref, onMounted } from 'vue';
 
-    const posts = [
-        { id: '1' },
-        { id: '2' },
-        { id: '3' },
-        { id: '4' },
-        { id: '5' },
-        { id: '6' },
-        { id: '7' },
-        { id: '8' },
-        { id: '9' },
-    ]
+    const posts = ref([]);
+
+    onMounted(async () => {
+        // Simulate fetching posts from an API
+        try {
+            const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+            const data = await res.json();
+            posts.value = data.slice(0, 6); // Limit to 6 posts for display
+            } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
+    })
 </script>

@@ -36,10 +36,17 @@
 
   <div class="p-4 text-center md:py-7 md:px-5">
     <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-      This is an article with ID = {{ id }}
+      This is an article with ID = {{ props.id }}
     </h3>
-    <p class="mt-2 text-gray-500 dark:text-neutral-400">
-      With supporting text below as a natural lead-in to additional content.
+    <p v-if="loading" class="mt-2 text-gray-500 dark:text-neutral-400">
+      <div class="animate-spin inline-block size-6 border-3 border-current border-t-transparent text-gray-400 rounded-full" role="status" aria-label="loading">
+  <span class="sr-only">Loading...</span>
+</div>
+    </p>
+    <p v-else class="mt-2 text-gray-500 dark:text-neutral-400">
+      {{ postData?.title }}
+      <br />
+      {{ postData?.body }}
     </p>
     <RouterLink to="/blog-posts">
 <a class="mt-3 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
@@ -51,7 +58,42 @@
 </template>
 
 <script setup>
-    defineProps({
-        id: String
+    import { ref, watch, onMounted } from 'vue';
+
+
+    const postData = ref(null);
+    const loading = ref(true);
+
+    const props = defineProps({
+        id: {
+          type: Number,
+          required: true,
+          default: null
+        }
+    })
+
+    const fetchData = async (myid) => {
+       try {
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${myid}`);
+            const data = await res.json();
+            console.log('Fetched article data:', data);
+            postData.value = data;
+        } catch (error) {
+            console.error('Error fetching article data:', error);
+        } finally {
+            loading.value = false;
+        }
+    }
+
+    watch(props.id, async (newId) => {
+      if (newId) {
+          fetchData(newId);
+      }
+    })
+
+    onMounted(() => {
+        if (props.id) {
+            fetchData(props.id);
+        }
     })
 </script>
