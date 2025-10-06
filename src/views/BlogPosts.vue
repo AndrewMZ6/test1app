@@ -1,8 +1,10 @@
 <template>
     <div>
         <h1>Blog Posts</h1>
-        <div v-for="post in posts" :key="post.id">
-            <BlogPost :id="post.id" />
+        <div class="grid grid-cols-4 gap-4">
+            <div v-for="post in posts" :key="post.id">
+                <BlogPost :id="post.id" />
+            </div>
         </div>
     </div>
 </template>

@@ -2,7 +2,7 @@
     <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
   <!-- Select (Mobile only) -->
   <div class="sm:hidden">
-    <label for="hs-card-nav" class="sr-only">This is an article with ID = {{ id }}</label>
+    <label for="hs-card-nav" class="sr-only">wdwww</label>
     <select name="hs-card-nav" id="hs-card-nav" class="block w-full border-t-0 border-x-0 border-gray-300 rounded-t-xl focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
       <option selected="">My Account</option>
       <option>Company</option>
@@ -36,7 +36,7 @@
 
   <div class="p-4 text-center md:py-7 md:px-5">
     <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-      Card title
+      This is an article with ID = {{ id }}
     </h3>
     <p class="mt-2 text-gray-500 dark:text-neutral-400">
       With supporting text below as a natural lead-in to additional content.
