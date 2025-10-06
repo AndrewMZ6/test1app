@@ -6,8 +6,42 @@
     <div v-html="prop3">
     </div>
     <slot name="doggy"></slot>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+    <div class="grid bg-white dark:bg-gray-800 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         />
+         <CardComponent 
+            :title="data ? data.title : 'Loading...'"
+            :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
+            :linkText="data ? 'View Task #' + data.id : 'Loading...'"
+         /><CardComponent 
             :title="data ? data.title : 'Loading...'"
             :description="data ? 'Completed: ' + data.completed : 'Fetching data from API...'"
             :linkText="data ? 'View Task #' + data.id : 'Loading...'"
