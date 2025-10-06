@@ -1,1 +1,0 @@
-import{u as s,c as a,a as n,b as r,t as u,d as o,_ as c,o as l}from"./index-C8m7_1kS.js";const i={class:"about"},d={__name:"AboutView",setup(_){const t=s();return(m,e)=>(l(),a("div",i,[e[0]||(e[0]=n("h1",null,"This is an about page",-1)),n("h3",null,u(o(t).count),1),r(c,{onClick:o(t).increment,buttonText:"Increment Count"},null,8,["onClick"])]))}};export{d as default};
