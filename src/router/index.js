@@ -26,7 +26,18 @@ const router = createRouter({
       path: '/concrete',
       name: 'concrete',
       component: () => import('../views/ConcreteUser.vue'),
-    }
+    },
+    {
+      path: '/blog-posts',
+      name: 'blog-posts',
+      component: () => import('../views/BlogPosts.vue'),
+    },
+    {
+      path: '/posts/:id',
+      name: 'posts',
+      component: () => import('../components/Article.vue'),
+      props: true,
+    },
   ],
 })
 

@@ -25,6 +25,10 @@ const routeUrls = [
     {
         url: "/concrete",
         text: "Конкретный узер"
+    },
+    {
+        url: "/blog-posts",
+        text: "Блог посты"
     }
 ]
 </script>
